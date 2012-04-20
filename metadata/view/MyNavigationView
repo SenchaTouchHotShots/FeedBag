@@ -1,0 +1,113 @@
+{
+    "id": "ExtBox1-ext-gen2660",
+    "type": "navigationview",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userClassName": "MyNavigationView"
+    },
+    "customConfigs": [],
+    "designerId": "2354f683-9055-404b-995a-aa9cad919ba4",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen2847",
+            "type": "list",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "FeedList",
+                "itemId": "mylist",
+                "itemTpl": "<div>{name}</div>",
+                "store": "FeedStore",
+                "onItemDisclosure": false,
+                "preventSelectionOnDisclose": false,
+                "designer|userClassName": "MyList",
+                "title": "FeedBag"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen9068",
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onFeedListItemSwipe",
+                        "implHandler": "// this is where we should display a delete button\n// swiping left to right should show the button.",
+                        "name": "itemswipe",
+                        "designer|userClassName": "onFeedListItemSwipe"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen3649",
+            "type": "navigationbar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyNavigationBar"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-navbar",
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen3904",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "addButton",
+                        "itemId": "mybutton",
+                        "text": "Add",
+                        "designer|userClassName": "MyButton",
+                        "align": "right"
+                    },
+                    "customConfigs": [],
+                    "expanded": true,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen12360",
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onAddButtonTap",
+                                "implHandler": "var sheet = Ext.getCmp('AddSheet');\nif(!Ext.isDefined(sheet)) {\n    sheet = Ext.create('MyApp.view.AddSheet');\n    Ext.Viewport.add(sheet);\n}\nsheet.show();",
+                                "name": "tap",
+                                "designer|userClassName": "onAddButtonTap"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

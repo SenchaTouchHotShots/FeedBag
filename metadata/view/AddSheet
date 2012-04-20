@@ -1,0 +1,169 @@
+{
+    "id": "ExtBox1-ext-gen4883",
+    "type": "sheet",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "height": 379,
+        "id": "AddSheet",
+        "width": 318,
+        "enter": "top",
+        "designer|userClassName": "AddSheet"
+    },
+    "customConfigs": [],
+    "designerId": "067a78d8-eecf-4b4c-8f48-fb49e08c6501",
+    "$viewOrder": 1,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen5071",
+            "type": "formpanel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 352,
+                "designer|userClassName": "MyFormPanel"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen5513",
+                    "type": "container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "height": 90,
+                        "html": "Add an RSS feed URL and a Name. Feed URLs should be in the format: http://feedURL.com",
+                        "margin": "'0 0 5 0'",
+                        "style": "text-align: center;",
+                        "tpl": null,
+                        "width": 265,
+                        "designer|userClassName": "MyContainer"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen5814",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "name",
+                        "margin": "'3 0 3 0'",
+                        "label": "Name",
+                        "name": "name",
+                        "designer|userClassName": "MyTextField"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen5979",
+                    "type": "textfield",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "url",
+                        "margin": "'3 0 3 0'",
+                        "label": "URL",
+                        "name": "url",
+                        "designer|userClassName": "MyTextField1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen7831",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "SaveButton",
+                        "itemId": "mybutton1",
+                        "margin": 10,
+                        "text": "Save",
+                        "designer|userClassName": "MyButton1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen11700",
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onSaveButtonTap",
+                                "implHandler": "var formPanel = this.down('formpanel');\n\nvar values = formPanel.getValues();\n\nvar store = Ext.data.StoreManager.lookup('FeedStore');\n\nvar record = Ext.ModelMgr.create(values, 'MyApp.model.Feed');\n\nstore.add(record);\n\nstore.sync();\n\nthis.hide();",
+                                "name": "tap",
+                                "designer|userClassName": "onSaveButtonTap"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen8000",
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "CancelButton",
+                        "itemId": "mybutton2",
+                        "margin": 10,
+                        "text": "Cancel",
+                        "designer|userClassName": "MyButton2"
+                    },
+                    "customConfigs": [],
+                    "expanded": true,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen11401",
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "fn": "onCancelButtonTap",
+                                "implHandler": "this.down('formpanel').reset();\nthis.hide();",
+                                "name": "tap",
+                                "designer|userClassName": "onCancelButtonTap"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
