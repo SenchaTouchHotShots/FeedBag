@@ -15,6 +15,7 @@
 
 Ext.define('MyApp.view.MyNavigationView', {
     extend: 'Ext.navigation.View',
+    alias: 'widget.MainView',
 
     config: {
         items: [

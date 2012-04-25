@@ -17,10 +17,10 @@ Ext.define('MyApp.view.AddSheet', {
     extend: 'Ext.Sheet',
 
     config: {
-        height: 379,
         id: 'AddSheet',
-        width: 318,
         enter: 'top',
+        stretchX: true,
+        stretchY: true,
         items: [
             {
                 xtype: 'formpanel',
@@ -32,7 +32,7 @@ Ext.define('MyApp.view.AddSheet', {
                         html: 'Add an RSS feed URL and a Name. Feed URLs should be in the format: http://feedURL.com',
                         margin: '\'0 0 5 0\'',
                         style: 'text-align: center;',
-                        width: 265
+                        width: '100%'
                     },
                     {
                         xtype: 'textfield',
