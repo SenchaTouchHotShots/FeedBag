@@ -15,9 +15,10 @@
 
 Ext.define('MyApp.view.FeedDetails', {
     extend: 'Ext.dataview.DataView',
+    alias: 'widget.feeddetails',
 
     config: {
-        store: 'MyStore1',
+        store: 'FeedItemStore',
         itemTpl: [
             '<div>{title}</div>'
         ]

@@ -15,20 +15,14 @@
 
 Ext.define('MyApp.store.FeedItemStore', {
     extend: 'Ext.data.Store',
+    alias: 'store.itemstore',
     requires: [
         'MyApp.model.FeedItem'
     ],
 
     config: {
+        autoLoad: false,
         model: 'MyApp.model.FeedItem',
-        storeId: 'MyStore1',
-        proxy: {
-            type: 'ajax',
-            url: 'http://feeds.boingboing.net/boingboing/iBag',
-            reader: {
-                type: 'xml',
-                record: 'item'
-            }
-        }
+        storeId: 'FeedItemStore'
     }
 });

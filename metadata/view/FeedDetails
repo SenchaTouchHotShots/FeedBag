@@ -1,5 +1,5 @@
 {
-    "id": "ExtBox1-ext-gen2901",
+    "id": "ucmpFeedDetails",
     "type": "dataview",
     "reference": {
         "name": "items",
@@ -8,8 +8,9 @@
     "codeClass": null,
     "userConfig": {
         "itemTpl": "<div>{title}</div>",
-        "store": "MyStore1",
-        "designer|userClassName": "FeedDetails"
+        "store": "FeedItemStore",
+        "designer|userClassName": "FeedDetails",
+        "designer|userAlias": "feeddetails"
     },
     "customConfigs": [],
     "designerId": "b26437e2-2b12-4ffb-81da-1da61a20599e",

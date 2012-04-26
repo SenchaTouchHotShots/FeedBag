@@ -14,7 +14,7 @@
     "customConfigs": [],
     "designerId": "2354f683-9055-404b-995a-aa9cad919ba4",
     "$viewOrder": 0,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen2847",
@@ -35,7 +35,7 @@
                 "title": "FeedBag"
             },
             "customConfigs": [],
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen9068",
@@ -69,7 +69,7 @@
             },
             "customConfigs": [],
             "iconCls": "icon-navbar",
-            "expanded": true,
+            "expanded": false,
             "cn": [
                 {
                     "id": "ExtBox1-ext-gen3904",

@@ -33,7 +33,7 @@ Ext.define('MyApp.model.FeedItem', {
             },
             {
                 mapping: 'dc:creator',
-                name: 'cretor'
+                name: 'creator'
             },
             {
                 name: 'description'

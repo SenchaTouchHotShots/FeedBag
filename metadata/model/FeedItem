@@ -86,7 +86,7 @@
             "codeClass": null,
             "userConfig": {
                 "mapping": "dc:creator",
-                "name": "cretor",
+                "name": "creator",
                 "designer|userClassName": "MyField7"
             },
             "customConfigs": [],

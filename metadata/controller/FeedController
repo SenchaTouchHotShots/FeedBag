@@ -1,0 +1,73 @@
+{
+    "id": "ExtBox1-ext-gen3013",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "FeedController"
+    },
+    "customConfigs": [],
+    "designerId": "bf775e29-941d-45dd-82a0-bb6fd7d47d4d",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen3210",
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "mainView",
+                "selector": "MainView",
+                "designer|userClassName": "mainView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen3510",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "createFeedDetailsView",
+                "designer|params": [
+                    "name",
+                    "url"
+                ],
+                "implHandler": "var newURL = 'http://query.yahooapis.com/v1/public/yql?',\n    yql = {\n    q: 'select * from rss where url=\"' + url + '\"',\n    format: 'json'\n};\n\nnewURL += Ext.Object.toQueryString(yql);\nvar details = Ext.create(\n    'MyApp.view.FeedDetails', {\n        title: name,\n        store: Ext.create('MyApp.store.FeedItemStore', {\n            proxy: {\n                type: 'jsonp',\n                url: newURL,\n                reader: {\n                    type: 'json',\n                    rootProperty: 'query.results.item',\n                    totalProperty: 'query.count'\n                }\n            }\n        })\n    });\ndetails.getStore().load();\nthis.getMainView().push(details);",
+                "designer|userClassName": "createFeedDetailsView"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen16579",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onListItemTap",
+                "implHandler": "this.createFeedDetailsView(record.get('name'), record.get('url'));",
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.List",
+                "designer|controlQuery": "#FeedList",
+                "designer|userClassName": "onListItemTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}

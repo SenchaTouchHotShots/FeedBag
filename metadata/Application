@@ -20,7 +20,10 @@
             "AddSheet",
             "FeedDetails"
         ],
-        "name": "MyApp"
+        "name": "MyApp",
+        "controllers": [
+            "FeedController"
+        ]
     },
     "customConfigs": [],
     "designerId": "application",

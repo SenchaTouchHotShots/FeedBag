@@ -32,6 +32,9 @@ Ext.application({
         'FeedDetails'
     ],
     name: 'MyApp',
+    controllers: [
+        'FeedController'
+    ],
 
     launch: function() {
         // Might be nice to create a RSS URL for documentation and updates

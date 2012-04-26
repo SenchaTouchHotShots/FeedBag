@@ -75,6 +75,14 @@
                 "app/model/FeedItem.js"
             ],
             "className": "FeedItem"
+        },
+        "bf775e29-941d-45dd-82a0-bb6fd7d47d4d": {
+            "paths": [
+                "metadata/controller/FeedController",
+                "app/controller/override/FeedController.js",
+                "app/controller/FeedController.js"
+            ],
+            "className": "FeedController"
         }
     },
     "expandedState": {
