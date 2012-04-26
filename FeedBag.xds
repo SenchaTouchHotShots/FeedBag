@@ -51,6 +51,30 @@
                 "app/view/AddSheet.js"
             ],
             "className": "AddSheet"
+        },
+        "b26437e2-2b12-4ffb-81da-1da61a20599e": {
+            "paths": [
+                "metadata/view/FeedDetails",
+                "app/view/override/FeedDetails.js",
+                "app/view/FeedDetails.js"
+            ],
+            "className": "FeedDetails"
+        },
+        "a0f1024a-765d-4f0f-bc19-4eb6b288dd5c": {
+            "paths": [
+                "metadata/store/FeedItemStore",
+                "app/store/override/FeedItemStore.js",
+                "app/store/FeedItemStore.js"
+            ],
+            "className": "FeedItemStore"
+        },
+        "246dc1a9-27d6-4484-b6f1-3ffac5cfbb9c": {
+            "paths": [
+                "metadata/model/FeedItem",
+                "app/model/override/FeedItem.js",
+                "app/model/FeedItem.js"
+            ],
+            "className": "FeedItem"
         }
     },
     "expandedState": {

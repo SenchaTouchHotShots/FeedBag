@@ -8,14 +8,17 @@
     "codeClass": null,
     "userConfig": {
         "models": [
-            "Feed"
+            "Feed",
+            "FeedItem"
         ],
         "stores": [
-            "FeedStore"
+            "FeedStore",
+            "FeedItemStore"
         ],
         "views": [
             "MyNavigationView",
-            "AddSheet"
+            "AddSheet",
+            "FeedDetails"
         ],
         "name": "MyApp"
     },

@@ -1,0 +1,18 @@
+{
+    "id": "ExtBox1-ext-gen2901",
+    "type": "dataview",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "itemTpl": "<div>{title}</div>",
+        "store": "MyStore1",
+        "designer|userClassName": "FeedDetails"
+    },
+    "customConfigs": [],
+    "designerId": "b26437e2-2b12-4ffb-81da-1da61a20599e",
+    "$viewOrder": 2,
+    "expanded": true
+}
