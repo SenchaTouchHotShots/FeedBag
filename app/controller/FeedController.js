@@ -23,12 +23,27 @@ Ext.define('MyApp.controller.FeedController', {
         control: {
             "#FeedList": {
                 itemtap: 'onListItemTap'
+            },
+            "feeddetails": {
+                itemtap: 'onDataviewItemTap'
             }
         }
     },
 
     onListItemTap: function(dataview, index, target, record, e, options) {
         this.createFeedDetailsView(record.get('name'), record.get('url'));
+    },
+
+    onDataviewItemTap: function(dataview, index, target, record, e, options) {
+
+        /* This will scroll our selected item into view after a delay of 200 milliseconds. */
+
+        var task = new Ext.util.DelayedTask(function(){
+            if (target) {
+                dataview.getScrollable().getScroller().scrollTo(0,  target.dom.offsetTop, true);
+            }
+        }, dataview);
+        task.delay(200);
     },
 
     createFeedDetailsView: function(name, url) {

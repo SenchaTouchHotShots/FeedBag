@@ -68,6 +68,25 @@
             },
             "customConfigs": [],
             "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen3213",
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onDataviewItemTap",
+                "implHandler": "\n/* This will scroll our selected item into view after a delay of 200 milliseconds. */\n\nvar task = new Ext.util.DelayedTask(function(){\n    if (target) {\n        dataview.getScrollable().getScroller().scrollTo(0,  target.dom.offsetTop, true);\n    }\n}, dataview);\ntask.delay(200);",
+                "name": "itemtap",
+                "designer|targetType": "Ext.dataview.DataView",
+                "designer|controlQuery": "feeddetails",
+                "designer|userClassName": "onDataviewItemTap"
+            },
+            "customConfigs": [],
+            "expanded": true
         }
     ]
 }
