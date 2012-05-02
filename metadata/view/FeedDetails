@@ -7,7 +7,7 @@
     },
     "codeClass": null,
     "userConfig": {
-        "itemTpl": "<div>{title}</div>",
+        "itemTpl": "<article>\n            <header>\n                <h2>{title}</h2>\n                <tpl if=\"creator\"><p class=\"creator\">by {creator}</p></tpl>\n                <tpl if=\"pubDate\"><time datetime=\"{pubDate:date(\"c\")}\">{pubDate:date(\"M j, Y, g:i a\")}</time></tpl>\n            </header>\n            <div class=\"description\">{description}</div>\n            <div class=\"content\">\n              <tpl for=\"content\">\n                <tpl if=\"xindex == 2\">{.}</tpl>\n              </tpl>\n            </div>\n            <footer>\n                <a href=\"{link}\">Read Original Article</a>\n            </footer>\n        </article>",
         "store": "FeedItemStore",
         "designer|userClassName": "FeedDetails",
         "designer|userAlias": "feeddetails"

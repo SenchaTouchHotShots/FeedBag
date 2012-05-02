@@ -20,7 +20,22 @@ Ext.define('MyApp.view.FeedDetails', {
     config: {
         store: 'FeedItemStore',
         itemTpl: [
-            '<div>{title}</div>'
+            '<article>',
+            '            <header>',
+            '                <h2>{title}</h2>',
+            '                <tpl if="creator"><p class="creator">by {creator}</p></tpl>',
+            '                <tpl if="pubDate"><time datetime="{pubDate:date("c")}">{pubDate:date("M j, Y, g:i a")}</time></tpl>',
+            '            </header>',
+            '            <div class="description">{description}</div>',
+            '            <div class="content">',
+            '              <tpl for="content">',
+            '                <tpl if="xindex == 2">{.}</tpl>',
+            '              </tpl>',
+            '            </div>',
+            '            <footer>',
+            '                <a href="{link}">Read Original Article</a>',
+            '            </footer>',
+            '        </article>'
         ]
     }
 

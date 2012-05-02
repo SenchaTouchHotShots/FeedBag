@@ -24,15 +24,16 @@ Ext.define('MyApp.model.FeedItem', {
                 name: 'link'
             },
             {
+                dateFormat: 'D, d M Y H:i:s T',
                 name: 'pubDate',
                 type: 'date'
             },
             {
-                mapping: 'content:encoded',
+                mapping: 'encoded.content',
                 name: 'content'
             },
             {
-                mapping: 'dc:creator',
+                mapping: 'creator.content',
                 name: 'creator'
             },
             {

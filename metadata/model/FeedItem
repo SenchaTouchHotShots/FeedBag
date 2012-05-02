@@ -12,7 +12,7 @@
     "customConfigs": [],
     "designerId": "246dc1a9-27d6-4484-b6f1-3ffac5cfbb9c",
     "$viewOrder": 1,
-    "expanded": false,
+    "expanded": true,
     "cn": [
         {
             "id": "ExtBox1-ext-gen3420",
@@ -53,6 +53,7 @@
             },
             "codeClass": null,
             "userConfig": {
+                "dateFormat": "D, d M Y H:i:s T",
                 "name": "pubDate",
                 "type": "date",
                 "designer|userClassName": "MyField5"
@@ -69,7 +70,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "mapping": "content:encoded",
+                "mapping": "encoded.content",
                 "name": "content",
                 "designer|userClassName": "MyField6"
             },
@@ -85,7 +86,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "mapping": "dc:creator",
+                "mapping": "creator.content",
                 "name": "creator",
                 "designer|userClassName": "MyField7"
             },
