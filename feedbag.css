@@ -1,0 +1,48 @@
+/* These first styles will cover the smallest possible device. Each article will be full width, and some extra fields will be hidden */
+
+article {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding: 2px;
+    margin: 0 0 2px;
+}
+
+article header, article div, article footer {
+    clear: both;
+}
+
+header h2 {
+    font-size: 140%;
+}
+
+header p {
+    font-size: 80%;
+    display: inline;
+    float: left;
+    padding-left: 2px;
+}
+
+header time {
+    font-size: 80%;
+    display: inline;
+    float: right;
+    padding-right: 2px;
+}
+
+article footer {
+    font-size: 80%;
+    text-align: center;
+}
+
+div.content, div.description {
+    /* Hide by default */
+    display: none;
+    /* Set a padding on the top to space us out from the header. */
+    padding-top: 10px;
+}
+
+/* Now we display the description if our item is selected */
+
+.x-dataview-item.x-item-selected div.description {
+    display: block;
+}
