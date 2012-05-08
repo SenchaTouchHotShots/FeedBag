@@ -1,0 +1,19 @@
+{
+    "id": "ExtBox1-ext-gen3650",
+    "type": "panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "tpl": "<article>\n            <header>\n                <h2>{title}</h2>\n                <tpl if=\"creator\"><p class=\"creator\">by {creator}</p></tpl>\n                <tpl if=\"pubDate\"><time datetime=\"{pubDate:date(\"c\")}\">{pubDate:date(\"M j, Y, g:i a\")}</time></tpl>\n            </header>\n            <div class=\"content\">\n              <tpl for=\"content\">\n                <tpl if=\"xindex == 2\">{.}</tpl>\n              </tpl>\n            </div>\n            <footer>\n                <a href=\"{link}\">Read Original Article</a>\n            </footer>\n        </article>",
+        "layout": "fit",
+        "scrollable": true,
+        "designer|userClassName": "FeedItem"
+    },
+    "customConfigs": [],
+    "designerId": "2f0f14ea-5092-4239-be3c-2d93810c671e",
+    "$viewOrder": 3,
+    "expanded": true
+}

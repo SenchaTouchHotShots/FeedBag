@@ -16,7 +16,7 @@ div.x-dataview-item:last-child {
 }
 
 /* Unless it's the last in a row of 3. */
-div.x-dataview-item:nth-of-type(12n+7) {
+div.x-dataview-item:nth-of-type(12n+7), div.x-dataview-item:nth-of-type(12n) {
     width: 33% !important;
 }
 

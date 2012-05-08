@@ -21,19 +21,6 @@ div.description {
     display: block;
 }
 
-
-/* For our selected articles */
-.x-dataview-item.x-item-selected, .x-dataview-item.x-item-selected article {
-    width: 100% !important;
-    max-height: none;
-}
-.x-dataview-item.x-item-selected div.description {
-    display: none;
-}
-.x-dataview-item.x-item-selected div.content {
-    display: block;
-}
-
 article img {
     max-width: 200px;
     height: auto; /* This keeps the aspect ratio */

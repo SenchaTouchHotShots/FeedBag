@@ -79,11 +79,30 @@
             "codeClass": null,
             "userConfig": {
                 "fn": "onDataviewItemTap",
-                "implHandler": "\n/* This will scroll our selected item into view after a delay of 200 milliseconds. */\n\nvar task = new Ext.util.DelayedTask(function(){\n    if (target) {\n        dataview.getScrollable().getScroller().scrollTo(0,  target.dom.offsetTop, true);\n    }\n}, dataview);\ntask.delay(200);",
+                "implHandler": "\n/* This will scroll our selected item into view after a delay of 200 milliseconds. */\n\nvar task = new Ext.util.DelayedTask(function(){\n    if (target) {\n        dataview.getScrollable().getScroller().scrollTo(0,  target.dom.offsetTop, true);\n    }\n}, dataview);\ntask.delay(200);\nthis.createFeedItemView(record);",
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.DataView",
                 "designer|controlQuery": "feeddetails",
                 "designer|userClassName": "onDataviewItemTap"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen4229",
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "createFeedItemView",
+                "designer|params": [
+                    "record"
+                ],
+                "implHandler": "var item = Ext.create(\n'MyApp.view.FeedItem', {\n    title: 'Article',\n    record: record\n});\nthis.getMainView().push(item);",
+                "designer|userClassName": "createFeedItemView"
             },
             "customConfigs": [],
             "expanded": true

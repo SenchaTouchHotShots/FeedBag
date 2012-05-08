@@ -29,7 +29,8 @@ Ext.application({
     views: [
         'MyNavigationView',
         'AddSheet',
-        'FeedDetails'
+        'FeedDetails',
+        'FeedItem'
     ],
     name: 'MyApp',
     controllers: [

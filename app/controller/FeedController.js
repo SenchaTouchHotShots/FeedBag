@@ -44,6 +44,7 @@ Ext.define('MyApp.controller.FeedController', {
             }
         }, dataview);
         task.delay(200);
+        this.createFeedItemView(record);
     },
 
     createFeedDetailsView: function(name, url) {
@@ -71,6 +72,15 @@ Ext.define('MyApp.controller.FeedController', {
         });
         details.getStore().load();
         this.getMainView().push(details);
+    },
+
+    createFeedItemView: function(record) {
+        var item = Ext.create(
+        'MyApp.view.FeedItem', {
+            title: 'Article',
+            record: record
+        });
+        this.getMainView().push(item);
     }
 
 });
