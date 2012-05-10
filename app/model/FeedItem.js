@@ -24,7 +24,6 @@ Ext.define('MyApp.model.FeedItem', {
                 name: 'link'
             },
             {
-                dateFormat: 'D, d M Y H:i:s T',
                 name: 'pubDate',
                 type: 'date'
             },
@@ -38,6 +37,12 @@ Ext.define('MyApp.model.FeedItem', {
             },
             {
                 name: 'description'
+            },
+            {
+                name: 'thumbnail'
+            },
+            {
+                name: 'author'
             }
         ]
     }

@@ -29,14 +29,18 @@ Ext.define('MyApp.view.FeedItem', {
             '                <tpl if="pubDate"><time datetime="{pubDate:date("c")}">{pubDate:date("M j, Y, g:i a")}</time></tpl>',
             '            </header>',
             '            <div class="content">',
+            '              <tpl if="content.length &gt; 0">',
             '              <tpl for="content">',
             '                <tpl if="xindex == 2">{.}</tpl>',
+            '              </tpl>',
+            '              <tpl else>',
+            '                {description}',
             '              </tpl>',
             '            </div>',
             '            <footer>',
             '                <a href="{link}">Read Original Article</a>',
             '            </footer>',
-            '        </article>'
+            '</article>'
         ]
     }
 

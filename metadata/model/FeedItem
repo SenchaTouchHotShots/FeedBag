@@ -53,7 +53,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "dateFormat": "D, d M Y H:i:s T",
+                "dateFormat": null,
                 "name": "pubDate",
                 "type": "date",
                 "designer|userClassName": "MyField5"
@@ -104,6 +104,36 @@
             "userConfig": {
                 "name": "description",
                 "designer|userClassName": "MyField8"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen3255",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "thumbnail",
+                "designer|userClassName": "MyField9"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen3783",
+            "type": "datafield",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "author",
+                "designer|userClassName": "MyField10"
             },
             "customConfigs": [],
             "expanded": true

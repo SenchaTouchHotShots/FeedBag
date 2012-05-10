@@ -119,3 +119,32 @@ font-size: 14px;
 text-decoration: none;
 vertical-align: middle;
 }
+
+/* Thumbnail styles */
+
+/* Hide images in the content. Just use the Thumb. */
+article.hasThumbnail div.content img, article.hasThumbnail div.description img {
+    display: none !important;
+}
+
+article.hasThumbnail header div.headline {
+    display: table-row;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+article.hasThumbnail header div * {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+article.hasThumbnail header img.thumbnail {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+article.hasThumbnail header h2 {
+    text-align: left;
+    width: 100%;
+}
