@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen4067",
     "type": "datamodel",
     "reference": {
         "name": "items",
@@ -9,13 +8,10 @@
     "userConfig": {
         "designer|userClassName": "Feed"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen4067",
     "designerId": "4cb8a780-462e-4b2c-ab2c-6b28909b642b",
-    "$viewOrder": 0,
-    "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen4175",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -23,15 +19,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField",
                 "name": "id",
-                "type": "int",
-                "designer|userClassName": "MyField"
+                "type": "int"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "a13d327a-20b1-4490-8199-5722904f891a"
         },
         {
-            "id": "ExtBox1-ext-gen4608",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -39,15 +33,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField1",
                 "name": "name",
-                "type": "string",
-                "designer|userClassName": "MyField1"
+                "type": "string"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "5e6edbfe-3cac-4c65-83ad-46bddb6c1f7b"
         },
         {
-            "id": "ExtBox1-ext-gen4769",
             "type": "datafield",
             "reference": {
                 "name": "fields",
@@ -55,12 +47,11 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "MyField2",
                 "name": "url",
-                "type": "string",
-                "designer|userClassName": "MyField2"
+                "type": "string"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "a40989a3-2652-4eed-b984-652d9f803928"
         }
     ]
 }

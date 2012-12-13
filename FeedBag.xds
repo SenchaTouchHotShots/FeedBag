@@ -2,23 +2,24 @@
     "name": "FeedBag",
     "settings": {
         "urlPrefix": "",
-        "directAPI": "",
         "spacesToIndent": 4,
-        "codeGenFormat": "Class",
         "exportPath": "",
-        "extPath": "http://extjs.cachefly.net/touch/sencha-touch-2.0.0/",
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "codeGenFormat": "Class",
         "senchaIoKey": "",
         "senchaIoPath": "http://extjs.cachefly.net/designer/IO/",
-        "lineEnding": "LF",
         "instantiateStore": true,
-        "genTimestamps": false,
         "saveOnDeploy": false,
-        "appName": "MyApp",
-        "mapsAPI": "http://maps.google.com/maps/api/js?sensor=true"
+        "appName": "MyApp"
     },
-    "xdsVersion": "2.0.0",
-    "xdsBuild": "412",
-    "framework": "touch20",
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 676,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch21",
     "topInstanceFileMap": {
         "677ab80b-6e19-47d0-a48e-8ae5d645a8a0": {
             "paths": [
@@ -91,13 +92,37 @@
                 "app/view/FeedItem.js"
             ],
             "className": "FeedItem"
+        },
+        "ef871dd0-0361-4ad9-9a60-390006a47228": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
         }
     },
-    "expandedState": {
-        "data": true,
-        "model": true,
-        "component": true,
-        "controller": true,
-        "resource": true
+    "viewOrderMap": {
+        "view": [
+            "067a78d8-eecf-4b4c-8f48-fb49e08c6501",
+            "b26437e2-2b12-4ffb-81da-1da61a20599e",
+            "2f0f14ea-5092-4239-be3c-2d93810c671e",
+            "2354f683-9055-404b-995a-aa9cad919ba4"
+        ],
+        "store": [
+            "677ab80b-6e19-47d0-a48e-8ae5d645a8a0",
+            "a0f1024a-765d-4f0f-bc19-4eb6b288dd5c"
+        ],
+        "controller": [
+            "bf775e29-941d-45dd-82a0-bb6fd7d47d4d"
+        ],
+        "model": [
+            "4cb8a780-462e-4b2c-ab2c-6b28909b642b",
+            "246dc1a9-27d6-4484-b6f1-3ffac5cfbb9c"
+        ],
+        "resource": [
+            "ef871dd0-0361-4ad9-9a60-390006a47228"
+        ],
+        "app": [
+            "application"
+        ]
     }
 }

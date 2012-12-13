@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen3013",
     "type": "controller",
     "reference": {
         "name": "items",
@@ -9,13 +8,10 @@
     "userConfig": {
         "designer|userClassName": "FeedController"
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen3013",
     "designerId": "bf775e29-941d-45dd-82a0-bb6fd7d47d4d",
-    "$viewOrder": 0,
-    "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen3210",
             "type": "controllerref",
             "reference": {
                 "name": "items",
@@ -23,15 +19,13 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "mainView",
                 "ref": "mainView",
-                "selector": "MainView",
-                "designer|userClassName": "mainView"
+                "selector": "MainView"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "cdeda464-ce01-4622-baf2-ffb15a1b8aa2"
         },
         {
-            "id": "ExtBox1-ext-gen3510",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -39,19 +33,42 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "createFeedDetailsView",
                 "fn": "createFeedDetailsView",
                 "designer|params": [
                     "name",
                     "url"
                 ],
-                "implHandler": "var newURL = 'http://query.yahooapis.com/v1/public/yql?',\n    yql = {\n        q: 'select * from rss where url=\"' + url + '\"',\n        format: 'json'\n    };\n\nnewURL += Ext.Object.toQueryString(yql);\nvar details = Ext.create(\n'MyApp.view.FeedDetails', {\n    title: name,\n    store: Ext.create('MyApp.store.FeedItemStore', {\n        proxy: {\n            type: 'jsonp',\n            url: newURL,\n            reader: {\n                type: 'json',\n                rootProperty: 'query.results.item',\n                totalProperty: 'query.count'\n            }\n        }\n    })\n});\ndetails.getStore().load();\nthis.getMainView().push(details);",
-                "designer|userClassName": "createFeedDetailsView"
+                "implHandler": [
+                    "var newURL = 'http://query.yahooapis.com/v1/public/yql?',",
+                    "    yql = {",
+                    "        q: 'select * from rss where url=\"' + url + '\"',",
+                    "        format: 'json'",
+                    "    };",
+                    "",
+                    "newURL += Ext.Object.toQueryString(yql);",
+                    "var details = Ext.create(",
+                    "'MyApp.view.FeedDetails', {",
+                    "    title: name,",
+                    "    store: Ext.create('MyApp.store.FeedItemStore', {",
+                    "        proxy: {",
+                    "            type: 'jsonp',",
+                    "            url: newURL,",
+                    "            reader: {",
+                    "                type: 'json',",
+                    "                rootProperty: 'query.results.item',",
+                    "                totalProperty: 'query.count'",
+                    "            }",
+                    "        }",
+                    "    })",
+                    "});",
+                    "details.getStore().load();",
+                    "this.getMainView().push(details);"
+                ]
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "3ef2354e-6b0f-4d1e-8e9f-3cdb0dd682e7"
         },
         {
-            "id": "ExtBox1-ext-gen16579",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -59,18 +76,18 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onListItemTap",
                 "fn": "onListItemTap",
-                "implHandler": "this.createFeedDetailsView(record.get('name'), record.get('url'));",
+                "implHandler": [
+                    "this.createFeedDetailsView(record.get('name'), record.get('url'));"
+                ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.List",
-                "designer|controlQuery": "#FeedList",
-                "designer|userClassName": "onListItemTap"
+                "designer|controlQuery": "#FeedList"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "fc8370d7-c1e5-445b-a01c-6f438b3ee4c7"
         },
         {
-            "id": "ExtBox1-ext-gen3213",
             "type": "controlleraction",
             "reference": {
                 "name": "listeners",
@@ -78,18 +95,27 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "onDataviewItemTap",
                 "fn": "onDataviewItemTap",
-                "implHandler": "\n/* This will scroll our selected item into view after a delay of 200 milliseconds. */\n\nvar task = new Ext.util.DelayedTask(function(){\n    if (target) {\n        dataview.getScrollable().getScroller().scrollTo(0,  target.dom.offsetTop, true);\n    }\n}, dataview);\ntask.delay(200);\nthis.createFeedItemView(record);",
+                "implHandler": [
+                    "",
+                    "/* This will scroll our selected item into view after a delay of 200 milliseconds. */",
+                    "",
+                    "var task = new Ext.util.DelayedTask(function(){",
+                    "    if (target) {",
+                    "        dataview.getScrollable().getScroller().scrollTo(0,  target.dom.offsetTop, true);",
+                    "    }",
+                    "}, dataview);",
+                    "task.delay(200);",
+                    "this.createFeedItemView(record);"
+                ],
                 "name": "itemtap",
                 "designer|targetType": "Ext.dataview.DataView",
-                "designer|controlQuery": "feeddetails",
-                "designer|userClassName": "onDataviewItemTap"
+                "designer|controlQuery": "feeddetails"
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "db243664-651c-4801-be9d-b0f26339bd36"
         },
         {
-            "id": "ExtBox1-ext-gen4229",
             "type": "basicfunction",
             "reference": {
                 "name": "items",
@@ -97,15 +123,21 @@
             },
             "codeClass": null,
             "userConfig": {
+                "designer|userClassName": "createFeedItemView",
                 "fn": "createFeedItemView",
                 "designer|params": [
                     "record"
                 ],
-                "implHandler": "var item = Ext.create(\n'MyApp.view.FeedItem', {\n    title: 'Article',\n    record: record\n});\nthis.getMainView().push(item);",
-                "designer|userClassName": "createFeedItemView"
+                "implHandler": [
+                    "var item = Ext.create(",
+                    "'MyApp.view.FeedItem', {",
+                    "    title: 'Article',",
+                    "    record: record",
+                    "});",
+                    "this.getMainView().push(item);"
+                ]
             },
-            "customConfigs": [],
-            "expanded": true
+            "designerId": "55c60bab-99e6-45c5-92fa-eb0dbd932a3e"
         }
     ]
 }

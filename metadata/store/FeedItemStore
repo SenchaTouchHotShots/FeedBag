@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen4807",
     "type": "store",
     "reference": {
         "name": "items",
@@ -7,14 +6,11 @@
     },
     "codeClass": null,
     "userConfig": {
-        "autoLoad": false,
-        "model": "FeedItem",
-        "storeId": "FeedItemStore",
         "designer|userClassName": "FeedItemStore",
-        "designer|userAlias": "itemstore"
+        "designer|userAlias": "itemstore",
+        "model": "FeedItem",
+        "storeId": "FeedItemStore"
     },
-    "customConfigs": [],
-    "designerId": "a0f1024a-765d-4f0f-bc19-4eb6b288dd5c",
-    "$viewOrder": 1,
-    "expanded": true
+    "id": "ExtBox1-ext-gen4807",
+    "designerId": "a0f1024a-765d-4f0f-bc19-4eb6b288dd5c"
 }

@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen2660",
     "type": "navigationview",
     "reference": {
         "name": "items",
@@ -7,17 +6,14 @@
     },
     "codeClass": null,
     "userConfig": {
-        "designer|initialView": true,
         "designer|userClassName": "MyNavigationView",
-        "designer|userAlias": "MainView"
+        "designer|userAlias": "MainView",
+        "designer|initialView": true
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen2660",
     "designerId": "2354f683-9055-404b-995a-aa9cad919ba4",
-    "$viewOrder": 0,
-    "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen2847",
             "type": "list",
             "reference": {
                 "name": "items",
@@ -25,20 +21,17 @@
             },
             "codeClass": null,
             "userConfig": {
+                "title": "FeedBag",
+                "designer|userClassName": "MyList",
                 "id": "FeedList",
                 "itemId": "mylist",
-                "itemTpl": "<div>{name}</div>",
                 "store": "FeedStore",
                 "onItemDisclosure": false,
-                "preventSelectionOnDisclose": false,
-                "designer|userClassName": "MyList",
-                "title": "FeedBag"
+                "preventSelectionOnDisclose": false
             },
-            "customConfigs": [],
-            "expanded": false,
+            "designerId": "e67b85d1-9bce-4762-b0b8-024fd251f06c",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen9068",
                     "type": "basiceventbinding",
                     "reference": {
                         "name": "listeners",
@@ -46,18 +39,35 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "onFeedListItemSwipe",
                         "fn": "onFeedListItemSwipe",
-                        "implHandler": "// this is where we should display a delete button\n// swiping left to right should show the button.",
-                        "name": "itemswipe",
-                        "designer|userClassName": "onFeedListItemSwipe"
+                        "implHandler": [
+                            "// this is where we should display a delete button",
+                            "// swiping left to right should show the button."
+                        ],
+                        "name": "itemswipe"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "a938f5cb-b850-48fb-b603-b7331ee0a954"
+                },
+                {
+                    "type": "template",
+                    "reference": {
+                        "name": "itemTpl",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "itemTpl",
+                        "implHandler": [
+                            "<div>{name}</div>"
+                        ],
+                        "designer|displayName": "itemTpl"
+                    },
+                    "designerId": "2afbe125-9fae-453b-8c4a-ad667c43df37"
                 }
             ]
         },
         {
-            "id": "ExtBox1-ext-gen3649",
             "type": "navigationbar",
             "reference": {
                 "name": "navigationBar",
@@ -67,12 +77,9 @@
             "userConfig": {
                 "designer|userClassName": "MyNavigationBar"
             },
-            "customConfigs": [],
-            "iconCls": "icon-navbar",
-            "expanded": false,
+            "designerId": "96941b80-4cbd-4fb1-84b0-688a63d893f9",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen3904",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -80,17 +87,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "align": "right",
+                        "designer|userClassName": "MyButton",
                         "id": "addButton",
                         "itemId": "mybutton",
-                        "text": "Add",
-                        "designer|userClassName": "MyButton",
-                        "align": "right"
+                        "text": "Add"
                     },
-                    "customConfigs": [],
-                    "expanded": true,
+                    "designerId": "8acbbb18-39ee-4d9d-9727-52d90db033d4",
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen12360",
                             "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
@@ -98,13 +103,19 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "onAddButtonTap",
                                 "fn": "onAddButtonTap",
-                                "implHandler": "var sheet = Ext.getCmp('AddSheet');\nif(!Ext.isDefined(sheet)) {\n    sheet = Ext.create('MyApp.view.AddSheet');\n    Ext.Viewport.add(sheet);\n}\nsheet.show();",
-                                "name": "tap",
-                                "designer|userClassName": "onAddButtonTap"
+                                "implHandler": [
+                                    "var sheet = Ext.getCmp('AddSheet');",
+                                    "if(!Ext.isDefined(sheet)) {",
+                                    "    sheet = Ext.create('MyApp.view.AddSheet');",
+                                    "    Ext.Viewport.add(sheet);",
+                                    "}",
+                                    "sheet.show();"
+                                ],
+                                "name": "tap"
                             },
-                            "customConfigs": [],
-                            "expanded": true
+                            "designerId": "6326102a-525e-490d-a7ea-0f6504cabaf0"
                         }
                     ]
                 }

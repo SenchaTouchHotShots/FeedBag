@@ -1,5 +1,4 @@
 {
-    "id": "ExtBox1-ext-gen4883",
     "type": "sheet",
     "reference": {
         "name": "items",
@@ -7,21 +6,18 @@
     },
     "codeClass": null,
     "userConfig": {
+        "designer|userClassName": "AddSheet",
         "height": null,
         "id": "AddSheet",
         "width": null,
         "enter": "top",
         "stretchX": true,
-        "stretchY": true,
-        "designer|userClassName": "AddSheet"
+        "stretchY": true
     },
-    "customConfigs": [],
+    "id": "ExtBox1-ext-gen4883",
     "designerId": "067a78d8-eecf-4b4c-8f48-fb49e08c6501",
-    "$viewOrder": 1,
-    "expanded": false,
     "cn": [
         {
-            "id": "ExtBox1-ext-gen5071",
             "type": "formpanel",
             "reference": {
                 "name": "items",
@@ -29,14 +25,12 @@
             },
             "codeClass": null,
             "userConfig": {
-                "height": 352,
-                "designer|userClassName": "MyFormPanel"
+                "designer|userClassName": "MyFormPanel",
+                "height": 352
             },
-            "customConfigs": [],
-            "expanded": true,
+            "designerId": "db632a3c-6861-4866-9ba3-a71de3ae08b3",
             "cn": [
                 {
-                    "id": "ExtBox1-ext-gen5513",
                     "type": "container",
                     "reference": {
                         "name": "items",
@@ -44,19 +38,16 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyContainer",
                         "height": 90,
                         "html": "Add an RSS feed URL and a Name. Feed URLs should be in the format: http://feedURL.com",
                         "margin": "'0 0 5 0'",
                         "style": "text-align: center;",
-                        "tpl": null,
-                        "width": "100%",
-                        "designer|userClassName": "MyContainer"
+                        "width": "100%"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "c69d7a3d-b9cb-4fdc-bbd0-808e6f59dcdf"
                 },
                 {
-                    "id": "ExtBox1-ext-gen5814",
                     "type": "textfield",
                     "reference": {
                         "name": "items",
@@ -64,17 +55,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyTextField",
                         "id": "name",
                         "margin": "'3 0 3 0'",
                         "label": "Name",
-                        "name": "name",
-                        "designer|userClassName": "MyTextField"
+                        "name": "name"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "be68a59a-c554-4538-86b0-29a95a3ee1fa"
                 },
                 {
-                    "id": "ExtBox1-ext-gen5979",
                     "type": "textfield",
                     "reference": {
                         "name": "items",
@@ -82,17 +71,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyTextField1",
                         "id": "url",
                         "margin": "'3 0 3 0'",
                         "label": "URL",
-                        "name": "url",
-                        "designer|userClassName": "MyTextField1"
+                        "name": "url"
                     },
-                    "customConfigs": [],
-                    "expanded": true
+                    "designerId": "85899088-0742-4dda-8550-d0dac8481bec"
                 },
                 {
-                    "id": "ExtBox1-ext-gen7831",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -100,17 +87,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton1",
                         "id": "SaveButton",
                         "itemId": "mybutton1",
                         "margin": 10,
-                        "text": "Save",
-                        "designer|userClassName": "MyButton1"
+                        "text": "Save"
                     },
-                    "customConfigs": [],
-                    "expanded": true,
+                    "designerId": "1fd2634c-22c2-4036-b490-c2aa3cd06a2c",
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen11700",
                             "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
@@ -118,18 +103,30 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "onSaveButtonTap",
                                 "fn": "onSaveButtonTap",
-                                "implHandler": "var formPanel = this.down('formpanel');\n\nvar values = formPanel.getValues();\n\nvar store = Ext.data.StoreManager.lookup('FeedStore');\n\nvar record = Ext.ModelMgr.create(values, 'MyApp.model.Feed');\n\nstore.add(record);\n\nstore.sync();\n\nthis.hide();",
-                                "name": "tap",
-                                "designer|userClassName": "onSaveButtonTap"
+                                "implHandler": [
+                                    "var formPanel = this.down('formpanel');",
+                                    "",
+                                    "var values = formPanel.getValues();",
+                                    "",
+                                    "var store = Ext.data.StoreManager.lookup('FeedStore');",
+                                    "",
+                                    "var record = Ext.ModelMgr.create(values, 'MyApp.model.Feed');",
+                                    "",
+                                    "store.add(record);",
+                                    "",
+                                    "store.sync();",
+                                    "",
+                                    "this.hide();"
+                                ],
+                                "name": "tap"
                             },
-                            "customConfigs": [],
-                            "expanded": true
+                            "designerId": "b1a9033c-f527-4a6d-98e3-59bab03f0afc"
                         }
                     ]
                 },
                 {
-                    "id": "ExtBox1-ext-gen8000",
                     "type": "button",
                     "reference": {
                         "name": "items",
@@ -137,17 +134,15 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "designer|userClassName": "MyButton2",
                         "id": "CancelButton",
                         "itemId": "mybutton2",
                         "margin": 10,
-                        "text": "Cancel",
-                        "designer|userClassName": "MyButton2"
+                        "text": "Cancel"
                     },
-                    "customConfigs": [],
-                    "expanded": true,
+                    "designerId": "f1e3f78e-0d08-456b-9844-bf92ae175d70",
                     "cn": [
                         {
-                            "id": "ExtBox1-ext-gen11401",
                             "type": "basiceventbinding",
                             "reference": {
                                 "name": "listeners",
@@ -155,13 +150,15 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "designer|userClassName": "onCancelButtonTap",
                                 "fn": "onCancelButtonTap",
-                                "implHandler": "this.down('formpanel').reset();\nthis.hide();",
-                                "name": "tap",
-                                "designer|userClassName": "onCancelButtonTap"
+                                "implHandler": [
+                                    "this.down('formpanel').reset();",
+                                    "this.hide();"
+                                ],
+                                "name": "tap"
                             },
-                            "customConfigs": [],
-                            "expanded": true
+                            "designerId": "66c4559f-b365-4896-98a3-e62a317d1f4e"
                         }
                     ]
                 }

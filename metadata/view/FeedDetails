@@ -1,5 +1,4 @@
 {
-    "id": "ucmpFeedDetails",
     "type": "dataview",
     "reference": {
         "name": "items",
@@ -7,13 +6,59 @@
     },
     "codeClass": null,
     "userConfig": {
-        "itemTpl": "<tpl if=\"thumbnail\">\n  <article class=\"hasThumbnail\">\n    <tpl else>\n      <article>\n    </tpl>\n    <header>\n      <div class=\"headline\">\n        <tpl if=\"thumbnail\">\n          <tpl for=\"thumbnail\">\n            <img class=\"thumbnail\" src=\"{url}\" height=\"{height}\" width=\"{width}\" alt=\"Thumbnail\" />\n          </tpl>\n        </tpl>\n        <h2>{title}</h2>\n      </div>\n      <tpl if=\"creator\"><p class=\"creator\">by {creator}</p>\n        <tpl elseif=\"author\"><p class=\"creator\">by {author}</p></tpl>\n        <tpl if=\"pubDate\"><time datetime=\"{pubDate:date(\"c\")}\">{pubDate:date(\"M j, Y, g:i a\")}</time></tpl>\n    </header>\n    <div class=\"description\">{description}</div>\n    <div class=\"content\">\n      <tpl if=\"content.length &gt; 0\">\n        <tpl for=\"content\">\n          <tpl if=\"xindex == 2\">{.}</tpl>\n        </tpl>\n        <tpl else>\n          {description}\n        </tpl>\n    </div>\n    <footer>\n      <a href=\"{link}\">Read Original Article</a>\n    </footer>\n    </article>",
-        "store": "FeedItemStore",
         "designer|userClassName": "FeedDetails",
-        "designer|userAlias": "feeddetails"
+        "designer|userAlias": "feeddetails",
+        "store": "FeedItemStore"
     },
-    "customConfigs": [],
+    "id": "ucmpFeedDetails",
     "designerId": "b26437e2-2b12-4ffb-81da-1da61a20599e",
-    "$viewOrder": 2,
-    "expanded": true
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<tpl if=\"thumbnail\">",
+                    "  <article class=\"hasThumbnail\">",
+                    "    <tpl else>",
+                    "      <article>",
+                    "    </tpl>",
+                    "    <header>",
+                    "      <div class=\"headline\">",
+                    "        <tpl if=\"thumbnail\">",
+                    "          <tpl for=\"thumbnail\">",
+                    "            <img class=\"thumbnail\" src=\"{url}\" height=\"{height}\" width=\"{width}\" alt=\"Thumbnail\" />",
+                    "          </tpl>",
+                    "        </tpl>",
+                    "        <h2>{title}</h2>",
+                    "      </div>",
+                    "      <tpl if=\"creator\"><p class=\"creator\">by {creator}</p>",
+                    "        <tpl elseif=\"author\"><p class=\"creator\">by {author}</p></tpl>",
+                    "        <tpl if=\"pubDate\"><time datetime=\"{pubDate:date(\"c\")}\">{pubDate:date(\"M j, Y, g:i a\")}</time></tpl>",
+                    "    </header>",
+                    "    <div class=\"description\">{description}</div>",
+                    "    <div class=\"content\">",
+                    "      <tpl if=\"content.length &gt; 0\">",
+                    "        <tpl for=\"content\">",
+                    "          <tpl if=\"xindex == 2\">{.}</tpl>",
+                    "        </tpl>",
+                    "        <tpl else>",
+                    "          {description}",
+                    "        </tpl>",
+                    "    </div>",
+                    "    <footer>",
+                    "      <a href=\"{link}\">Read Original Article</a>",
+                    "    </footer>",
+                    "    </article>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "06b2b5a6-93e2-43d1-af80-14411cd01498"
+        }
+    ]
 }
